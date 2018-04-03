@@ -1,0 +1,80 @@
+@font-face {
+	font-family: FontAwesome;
+	src: url(../fonts/FontAwesome.otf);
+}
+
+* {
+    position: relative;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font: inherit;
+    line-height: inherit;
+	color: inherit;
+    font-weight: normal;
+    text-decoration: none;
+    list-style: none;
+	border-collapse: collapse;
+	border-spacing: 0;
+	outline: none;
+	box-shadow: none;
+	box-sizing: border-box;
+	cursor: default;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+*::-moz-selection {
+	background-color: inherit;
+	color: inherit;
+}
+
+*::selection {
+	background-color: inherit;
+	color: inherit;
+}
+
+a, a *, a * *, button, input[type='range'], input[type='button'],
+input[type='submit'], input[type='reset'] {
+  cursor: pointer; 
+}
+
+input, textarea {
+	cursor: text;
+}
+
+img {
+    vertical-align: middle;
+}
+
+html, body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+.pd {
+    cursor: default !important;
+}
+
+.fa {
+    font-family: FontAwesome, sans-serif;
+}
+
+.overlay {
+	display: none;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+
+.clear {
+	width: 100%;
+	height: 0;
+	clear: both;
+}

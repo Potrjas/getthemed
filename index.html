@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GETTHEMED</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/min1000.css" media="only screen and (min-width: 800px)" />
+    <link rel="stylesheet" href="css/max999.css" media="only screen and (max-width: 799px)" />
+	<script src="js/jquery.js"></script>
+	<script src="js/joint.js"></script>
+	<script src="js/nicescroll.js"></script>
+	<script src="js/flexslider.js"></script>
+	<script src="js/knob.js"></script>
+</head>
+<body>
+<header>
+	<span class="fa">&#xf0c9;</span>
+	<div>
+		<nav>
+			<a class="act" href="#home" onclick="return false;">home</a>
+			<a href="#customize" onclick="return false;">customize</a>
+			<a href="#contacts" onclick="return false;">contacts</a>
+			<a href="#about" onclick="return false;">about</a>
+		</nav>
+	</div>
+</header>
+<div class="panel heroPanel" id="home">
+	<section class="back">
+		<div class="shadow"></div>
+	</section>
+	<div>
+		<h2>WordPress team abilities demonstration.</h2>
+		<div class="buttonsCont">
+			<button class="customButton r32" id="customizeButtons">customize buttons</button>
+			<button class="customButton r32" id="customizeHeroPanel">customize heroscreen</button>
+		</div>
+		<div class="macBook">
+			<img src="images/macBook.png" alt="macBook" />
+			<div class="back">
+				<div class="shadow">
+					<img src="images/glare.png" alt="glare" />
+				</div>
+			</div>
+			<p>
+				<span>Your image</span>
+				<br />
+				-2880x1800 Pixel-
+			</p>
+		</div>
+		<div class="iPhone">
+			<img src="images/iPhone.png" alt="iPhone" />
+			<div class="back">
+				<div class="shadow"></div>
+			</div>
+			<p>
+				<span>Your image</span>
+				<br />
+				-1125x2436 Pixel-
+			</p>
+		</div>
+		<div class="customizeButtons">
+			<h2>select button:</h2>
+			<button class="customButton" id="r0">customize button 1</button>
+			<button class="customButton" id="r16">customize button 2</button>
+			<button class="customButton" id="r32">customize button 3</button>
+		</div>
+		<div class="customizeHeroPanel">
+			<h2>select image:</h2>
+			<button class="customButton r32" id="browseBI">browse...</button>
+			<button class="customButton r32" id="applyBI">apply</button>
+			<button class="customButton r32" id="resetBI">reset</button>
+			<form method="post" enctype="multipart/form-data" action="js/userImage.php"
+				target="imgFrame">
+				<input type="file" accept="image/*" name="userFile" onchange="this.form.submit()" />
+			</form>
+			<iframe name="imgFrame"></iframe>
+		</div>
+	</div>
+</div>
+<div class="panel textPanel" id="customize">
+	<section>
+		<div class="selectLayout">
+			<h2>Select layout</h2>
+			<a class="oneColListRight" href="" onclick="return false;">
+				List right
+				<img src="images/icoOneColListRight.png"  alt="ico" />
+			</a>
+			<a  class="oneColListLeft" href="" onclick="return false;">
+				List left
+				<img src="images/icoOneColListLeft.png" alt="ico" />
+			</a>
+			<a class="wideListRight" href="" onclick="return false;">
+				Wide list right
+				<img src="images/icoWideListRight.png" alt="ico" />
+			</a>
+			<a class="wideListLeft" href="" onclick="return false;">
+				Wide list left
+				<img src="images/icoWideListLeft.png" alt="ico" />
+			</a>
+			<a class="twoColListRight" href="" onclick="return false;">
+				Two columns, list right
+				<img src="images/icoTwoColListRight.png" alt="ico" />
+			</a>
+			<a class="twoColListLeft" href="" onclick="return false;">
+				Two columns, list left
+				<img src="images/icoTwoColListLeft.png" alt="ico" />
+			</a>
+			<a class="twoCol" href="" onclick="return false;">
+				Two columns
+				<img src="images/icoTwoCol.png" alt="ico" />
+			</a>
+			<a class="threeCol" href="" onclick="return false;">
+				Three columns
+				<img src="images/icoThreeCol.png" alt="ico" />
+			</a>
+			<span>
+				<a class="listBottom" href="" onclick="return false;">
+					List Bottom
+					<img src="images/icoListBottom.png" alt="ico" />
+				</a>
+				<a  class="listMiddle" href="" onclick="return false;">
+					List Middle
+					<img src="images/icoListMiddle.png" alt="ico" />
+				</a>
+				<a class="listTop" href="" onclick="return false;">
+					List Top
+					<img src="images/icoListTop.png"  alt="ico" />
+				</a>
+			</span>
+			<div class="buttonsCont">
+				<button class="customButton r32" id="applyTP">apply</button>
+				<button class="customButton r32" id="cancelTP">cancel</button>
+			</div>
+		</div>
+	</section>
+	<div>
+		<div>
+			<h2>Text panel layout customization.</h2>
+			<div id="columns">
+				<div class="column1">
+					<a href="" onclick="return false;">
+						more
+						<span class="fa">&#xf107;</span>
+					</a>
+					Maecenas a ultricies libero, eget fringilla leo. Sed laoreet suscipit metus. Sed velit nisl, scelerisque sit amet tellus in, suscipit luctus dolor. Nulla augue ipsum, tempor hendrerit augue id, rhoncus facilisis lectus. Nulla in leo orci. Curabitur massa dui, gravida in viverra sed, pharetra sit amet nunc. In malesuada lacus in elit blandit ullamcorper. Etiam et justo justo. Proin fringilla lectus ex, at mattis nulla dictum eget. Donec convallis porttitor ipsum, id finibus augue porttitor non. Cras pretium nibh odio, at auctor orci laoreet sed. Praesent venenatis ex vitae dolor tristique, vitae facilisis velit semper. Nullam in nibh ullamcorper, ultricies lorem non, pharetra mi. Sed suscipit dui a tortor mollis pharetra. Sed pharetra magna diam, vitae porttitor turpis placerat sit amet. Donec turpis urna, scelerisque eget sapien placerat, feugiat consectetur turpis. Aliquam erat volutpat. Fusce rutrum sem at efficitur accumsan. Fusce lorem risus, hendrerit eget consectetur at, iaculis vel nisl. Aliquam eget felis feugiat, volutpat erat in, hendrerit enim. Curabitur dictum sollicitudin turpis, non gravida massa semper vel. Vestibulum eu eros efficitur elit lacinia varius. Sed mauris neque, faucibus at placerat vel, fringilla sit amet. Cras posuere libero id nisl porttitor ultricies. Vivamus eu malesuada erat. Vivamus tempus iaculis elit eu feugiat. Nunc id consequat mauris, id euismod turpis. Fusce aliquam pretium feugiat. Pellentesque at ligula a nibh dictum malesuada. Aenean blandit laoreet efficitur. Sed mattis non orci sed hendrerit. Nunc ornare risus id nulla dapibus, a porta est sollicitudin. In ornare, lacus a molestie sollicitudin, lorem dui hendrerit erat, eu pulvinar massa tellus a purus.
+				</div>
+				<div class="column2">
+					<a href="" onclick="return false;">
+						more
+						<span class="fa">&#xf107;</span>
+					</a>
+					Maecenas a ultricies libero, eget fringilla leo. Sed laoreet suscipit metus. Sed velit nisl, scelerisque sit amet tellus in, suscipit luctus dolor. Nulla augue ipsum, tempor hendrerit augue id, rhoncus facilisis lectus. Nulla in leo orci. Curabitur massa dui, gravida in viverra sed, pharetra sit amet nunc. In malesuada lacus in elit blandit ullamcorper. Etiam et justo justo. Proin fringilla lectus ex, at mattis nulla dictum eget. Donec convallis porttitor ipsum, id finibus augue porttitor non. Cras pretium nibh odio, at auctor orci laoreet sed. Praesent venenatis ex vitae dolor tristique, vitae facilisis velit semper. Nullam in nibh ullamcorper, ultricies lorem non, pharetra mi. Sed suscipit dui a tortor mollis pharetra. Sed pharetra magna diam, vitae porttitor turpis placerat sit amet. Donec turpis urna, scelerisque eget sapien placerat, feugiat consectetur turpis. Aliquam erat volutpat. Fusce rutrum sem at efficitur accumsan. Fusce lorem risus, hendrerit eget consectetur at, iaculis vel nisl. Aliquam eget felis feugiat, volutpat erat in, hendrerit enim. Curabitur dictum sollicitudin turpis, non gravida massa semper vel. Vestibulum eu eros efficitur elit lacinia varius. Sed mauris neque, faucibus at placerat vel, fringilla sit amet. Cras posuere libero id nisl porttitor ultricies.
+				</div>
+				<div class="column3">
+					<a href="" onclick="return false;">
+						more
+						<span class="fa">&#xf107;</span>
+					</a>
+					Maecenas a ultricies libero, eget fringilla leo. Sed laoreet suscipit metus. Sed velit nisl, scelerisque sit amet tellus in, suscipit luctus dolor. Nulla augue ipsum, tempor hendrerit augue id, rhoncus facilisis lectus. Nulla in leo orci. Curabitur massa dui, gravida in viverra sed, pharetra sit amet nunc. In malesuada lacus in elit blandit ullamcorper. Etiam et justo justo. Proin fringilla lectus ex, at mattis nulla dictum eget. Donec convallis porttitor ipsum, id finibus augue porttitor non. Cras pretium nibh odio, at auctor orci laoreet sed. Praesent venenatis ex vitae dolor tristique, vitae facilisis velit semper. Nullam in nibh ullamcorper, ultricies lorem non, pharetra mi. Sed suscipit dui a tortor mollis pharetra. Sed pharetra magna diam, vitae porttitor turpis placerat sit amet. Donec turpis urna, scelerisque eget sapien placerat, feugiat consectetur turpis. Aliquam erat volutpat. Fusce rutrum sem at efficitur accumsan. Fusce lorem risus, hendrerit eget consectetur at, iaculis vel nisl. Aliquam eget felis feugiat, volutpat erat in, hendrerit enim. Curabitur dictum sollicitudin turpis, non gravida massa semper vel. Vestibulum eu eros efficitur elit lacinia varius. Sed mauris neque, faucibus at placerat vel, fringilla sit amet. Cras posuere libero id nisl porttitor ultricies. Vivamus eu malesuada erat. Vivamus tempus iaculis elit eu feugiat. Nunc id consequat mauris, id euismod turpis. Fusce aliquam pretium feugiat. Pellentesque at ligula a nibh dictum malesuada. Aenean blandit laoreet efficitur. Sed mattis non orci sed hendrerit.
+				</div>
+				<div class="list">
+					<ul>
+						<li>Sed suscipit elit sed justo cursus malesuada.</li>
+						<li>Nullam non justo et nisl iaculis pharetra quis eu est. Cras varius risus eu vestibulum gravida.</li>
+						<li>Nulla rutrum mauris ut massa bibendum eleifend.</li>
+						<li>Cras varius risus eu vestibulum gravida.</li>
+						<li>Sed et mi ac mi ullamcorper pharetra ac ac diam.</li>
+					</ul>
+				</div>
+			</div>
+			<button class="customButton r32" id="customizePanel">customize panel</button>
+		</div>
+	</div>
+</div>
+<div class="panel loginPanel" id="contacts">
+	<section class="back">
+		<div class="shadow"></div>
+	</section>
+	<div>
+		<div class="login">
+			<img src="images/iPad.png" alt="iPad" />
+			<div class="back"></div>
+			<form>
+				<h3>Login form</h3>
+				<span class="fa">&#xf007;</span>
+				<input class="field" type="text" placeholder="userName" />
+				<span class="fa">&#xf09c;</span>
+				<input class="field" type="password" placeholder="********" />
+				<input type="submit" value="Login" onclick="return false;" />
+			</form>
+		</div>
+		<div id="textFields" class="transparentBack">
+			<h2>
+				Text fields
+				<a id="whiteBack" href="" onclick="return false;">Aa</a>
+				<a id="transparentBack" class="act" href="" onclick="return false;">Aa</a>
+			</h2>
+			<input type="text" placeholder="textField1" />
+			<textarea maxlength="500" placeholder="textField2"></textarea>
+		</div>
+	</div>
+</div>
+<div class="panel videoPanel" id="about">
+	<div>
+		<div class="video">
+			<iframe class="act" src="https://www.youtube.com/embed/Q8Tiz6INF7I?rel=0&amp;showinfo=0"></iframe>
+			<iframe src="https://www.youtube.com/embed/TOPSETBUgvQ?rel=0&amp;showinfo=0" ></iframe>
+			<iframe src="https://www.youtube.com/embed/p4KBBsqptqU?rel=0&amp;showinfo=0"></iframe>
+		</div>
+		<div class="videoDescr">
+			<h2>Video panel</h2>
+			<div>
+				<a href="" onclick="return false;">
+					more
+					<span class="fa">&#xf107;</span>
+				</a>
+				Maecenas a ultricies libero, eget fringilla leo. Sed laoreet suscipit metus. Sed velit nisl, scelerisque sit amet tellus in, suscipit luctus dolor. Nulla augue ipsum, tempor hendrerit augue id, rhoncus facilisis lectus. Nulla in leo orci. Curabitur massa dui, gravida in viverra sed, pharetra sit amet nunc. In malesuada lacus in elit blandit ullamcorper. Etiam et justo justo. Proin fringilla lectus ex, at mattis nulla dictum eget. Donec convallis porttitor ipsum, id finibus augue porttitor non. Cras pretium nibh odio, at auctor orci laoreet sed. Praesent venenatis ex vitae dolor tristique, vitae facilisis velit semper. Nullam in nibh ullamcorper, ultricies lorem non, pharetra mi. Sed suscipit dui a tortor mollis pharetra. Sed pharetra magna diam, vitae porttitor turpis placerat sit amet. Donec turpis urna, scelerisque eget sapien placerat, feugiat consectetur turpis. Aliquam erat volutpat. Fusce rutrum sem at efficitur accumsan. Fusce lorem risus, hendrerit eget consectetur at, iaculis vel nisl. Aliquam eget felis feugiat, volutpat erat in, hendrerit enim. Curabitur dictum sollicitudin turpis, non gravida massa semper vel. Vestibulum eu eros efficitur elit lacinia varius. Sed mauris neque, faucibus at placerat vel, fringilla sit amet. Cras posuere libero id nisl porttitor ultricies. Vivamus eu malesuada erat. Vivamus tempus iaculis elit eu feugiat. Nunc id consequat mauris, id euismod turpis. Fusce aliquam pretium feugiat. Pellentesque at ligula a nibh dictum malesuada. Aenean blandit laoreet efficitur. Sed mattis non orci sed hendrerit. Nunc ornare risus id nulla dapibus, a porta est sollicitudin. In ornare, lacus a molestie sollicitudin, lorem dui hendrerit erat, eu pulvinar massa tellus a purus.
+				<span class="blind"></span>
+			</div>
+			<button class="customButton r32">customize button 3</button>
+			<span>
+				<a class="act" href="" onclick="return false;"></a>
+				<a href="" onclick="return false;"></a>
+				<a href="" onclick="return false;"></a>
+			</span>
+		</div>
+	</div>
+</div>
+<div class="panel gallery">
+	<div>
+		<div class="galleryDescr">
+			<h2>The Gallery 2:1</h2>
+			<div>
+				<a href="" onclick="return false;">
+					more
+					<span class="fa">&#xf107;</span>
+				</a>
+				Maecenas a ultricies libero, eget fringilla leo. Sed laoreet suscipit metus. Sed velit nisl, scelerisque sit amet tellus in, suscipit luctus dolor. Nulla augue ipsum, tempor hendrerit augue id, rhoncus facilisis lectus. Nulla in leo orci. Curabitur massa dui, gravida in viverra sed, pharetra sit amet nunc. In malesuada lacus in elit blandit ullamcorper. Etiam et justo justo. Proin fringilla lectus ex, at mattis nulla dictum eget. Donec convallis porttitor ipsum, id finibus augue porttitor non. Cras pretium nibh odio, at auctor orci laoreet sed. Praesent venenatis ex vitae dolor tristique, vitae facilisis velit semper. Nullam in nibh ullamcorper, ultricies lorem non, pharetra mi. Sed suscipit dui a tortor mollis pharetra. Sed pharetra magna diam, vitae porttitor turpis placerat sit amet. Donec turpis urna, scelerisque eget sapien placerat, feugiat consectetur turpis. Aliquam erat volutpat. Fusce rutrum sem at efficitur accumsan. Fusce lorem risus, hendrerit eget consectetur at, iaculis vel nisl. Aliquam eget felis feugiat, volutpat erat in, hendrerit enim. Curabitur dictum sollicitudin turpis, non gravida massa semper vel. Vestibulum eu eros efficitur elit lacinia varius. Sed mauris neque, faucibus at placerat vel, fringilla sit amet. Cras posuere libero id nisl porttitor ultricies. Vivamus eu malesuada erat. Vivamus tempus iaculis elit eu feugiat. Nunc id consequat mauris, id euismod turpis. Fusce aliquam pretium feugiat. Pellentesque at ligula a nibh dictum malesuada. Aenean blandit laoreet efficitur. Sed mattis non orci sed hendrerit. Nunc ornare risus id nulla dapibus, a porta est sollicitudin. In ornare, lacus a molestie sollicitudin, lorem dui hendrerit erat, eu pulvinar massa tellus a purus.
+				<span class="blind"></span>
+			</div>
+		</div>
+		<div class="slider">
+			<div id="slider" class="flexslider">
+				<ul class="slides">
+					<li>
+						<img src="images/gal1.jpg" alt="slide" />
+					</li>
+					<li>
+						<img src="images/gal2.jpg" alt="slide" />
+					</li>
+					<li>
+						<img src="images/gal3.jpg" alt="slide" />
+					</li>
+					<li>
+						<img src="images/gal4.jpg" alt="slide" />
+					</li>
+					<li>
+						<img src="images/gal5.jpg" alt="slide" />
+					</li>
+					<li>
+						<img src="images/gal4.jpg" alt="slide" />
+					</li>
+					<li>
+						<img src="images/gal3.jpg" alt="slide" />
+					</li>
+					<li>
+						<img src="images/gal2.jpg" alt="slide" />
+					</li>
+					<li>
+						<img src="images/gal1.jpg" alt="slide" />
+					</li>
+				</ul>
+			</div>
+			<div id="carousel" class="flexslider">
+				<ul class="slides">
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="panel business">
+	<div>
+		<h2>
+			Your business bla-bla-bla. Super impressive screen about something  in numbers and icons
+		</h2>
+		<div>
+			<span>
+				<img src="images/icoBus1.png" alt="ico" />
+			</span>
+			<h4>Adaptive Design</h4>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+		</div>
+		<div>
+			<span>
+				<img src="images/icoBus2.png" alt="ico" />
+			</span>
+			<h4>cross-platform</h4>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit
+		</div>
+		<div>
+			<span>
+				<img src="images/icoBus3.png" alt="ico" />
+			</span>
+			<h4>ADA-compliant</h4>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+		</div>
+		<span>
+			<button class="customButton r32" >learn more</button>
+		</span>
+	</div>
+</div>
+<div class="panel stats">
+	<section class="back">
+		<div class="shadow"></div>
+	</section>
+	<div>
+		<div class="bBlock">
+			1500+
+			<span>themes created</span>
+		</div>
+		<div class="bBlock">
+			49
+			<span>regular customers</span>
+		</div>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut  laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+		</p>
+		<span>
+			<button class="customButton r32" >learn more</button>
+		</span>
+		<div class="scales">
+			<input type="text" value="100" id="scale1">
+			<input type="text" value="49" id="scale2">
+			<input type="text" value="95" id="scale3">
+			<input type="text" value="18" id="scale4">
+		</div>
+
+	</div>
+</div>
+<div class="panel plan">
+	<div>
+		<h2>Choose your plan</h2>
+		<div>
+			<h3>standart</h3>
+			<span>$76.00</span>
+			<ul>
+				<li>Sed suscipit elit.</li>
+				<li>Nullam non justo et nisl.</li>
+				<li>Nulla rutrum mauris.</li>
+				<li>Cras varius risus eu vestibulum gravida.</li>
+				<li>Sed et mi ac mi ullamcorper.</li>
+			</ul>
+			<button class="customButton r32">sign up</button>
+		</div>
+		<div>
+			<h3>business</h3>
+			<span>120.00</span>
+			<ul>
+				<li>Sed suscipit elit sed justo cursus malesuada.</li>
+				<li>Nullam non justo et nisl iaculis pharetra quis eu est.</li>
+				<li>Nulla rutrum mauris ut massa bibendum eleifend.</li>
+				<li>Cras varius risus eu vestibulum gravida.</li>
+				<li>Sed et mi ac mi ullamcorper pharetra ac ac diam.</li>
+			</ul>
+			<button class="customButton r32">sign up</button>
+		</div>
+		<div>
+			<h3>godmode</h3>
+			<span>0.00</span>
+			<ul>
+				<li>Sed suscipit elit.</li>
+				<li>Nullam non justo.</li>
+				<li>Nulla rutrum.</li>
+				<li>Cras varius.</li>
+				<li>Sed pharetra.</li>
+			</ul>
+			<button class="customButton r32">sign up</button>
+		</div>
+	</div>
+</div>
+<footer></footer>
+<div class="overlay"></div>
+</body>
+</html>
